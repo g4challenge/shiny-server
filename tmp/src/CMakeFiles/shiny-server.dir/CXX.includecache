@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/lukas/Downloads/shiny-server-master/src/launcher.cc
+unistd.h
+-
+sys/param.h
+-
+stdio.h
+-
+stdlib.h
+-
+errno.h
+-
+libgen.h
+-
+string.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+string
+-
+vector
+-
+algorithm
+-
+launcher.h
+/Users/lukas/Downloads/shiny-server-master/src/launcher.h
+
+/Users/lukas/Downloads/shiny-server-master/src/launcher.h
+

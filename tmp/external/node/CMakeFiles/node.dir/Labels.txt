@@ -1,0 +1,13 @@
+# Target labels
+ node
+# Source files and their labels
+/Users/lukas/Downloads/shiny-server-master/tmp/external/node/CMakeFiles/node
+/Users/lukas/Downloads/shiny-server-master/tmp/external/node/CMakeFiles/node.rule
+/Users/lukas/Downloads/shiny-server-master/tmp/external/node/CMakeFiles/node-complete.rule
+/Users/lukas/Downloads/shiny-server-master/tmp/external/node/node-prefix/src/node-stamp/node-install.rule
+/Users/lukas/Downloads/shiny-server-master/tmp/external/node/node-prefix/src/node-stamp/node-mkdir.rule
+/Users/lukas/Downloads/shiny-server-master/tmp/external/node/node-prefix/src/node-stamp/node-download.rule
+/Users/lukas/Downloads/shiny-server-master/tmp/external/node/node-prefix/src/node-stamp/node-update.rule
+/Users/lukas/Downloads/shiny-server-master/tmp/external/node/node-prefix/src/node-stamp/node-patch.rule
+/Users/lukas/Downloads/shiny-server-master/tmp/external/node/node-prefix/src/node-stamp/node-configure.rule
+/Users/lukas/Downloads/shiny-server-master/tmp/external/node/node-prefix/src/node-stamp/node-build.rule

@@ -1,0 +1,1 @@
+cmd='/usr/local/bin/python;/Users/lukas/Downloads/shiny-server-master/external/node/node-v5.0.0/configure;--prefix=/Users/lukas/Downloads/shiny-server-master/ext/node'

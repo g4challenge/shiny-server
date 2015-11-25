@@ -1,0 +1,2 @@
+/Users/lukas/Downloads/shiny-server-master/tmp/external/node/CMakeFiles/node.dir
+/Users/lukas/Downloads/shiny-server-master/tmp/src/CMakeFiles/shiny-server.dir
