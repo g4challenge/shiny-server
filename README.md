@@ -1,5 +1,5 @@
 # Shiny Server
-
+https://github.com/rstudio/shiny-server/wiki/Building-Shiny-Server-from-Source
 Shiny Server is a server program that makes [Shiny](https://rstudio.com/shiny) applications available over the web.
 
 ## Features
