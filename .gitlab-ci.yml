@@ -1,11 +1,10 @@
-image: r-base:latest
+image: node:4.3.0
 
 before_script:
-  - echo "options(bitmapType='cairo')" >> ~/.Rprofile
   - apt-get update -qy
-  - apt-get install -y cmake python gcc g++ git build-essential curl
-  - curl -sL https://deb.nodesource.com/setup_4.x | bash -
-  - apt-get install -y nodejs
+  - apt-get install -y cmake python gcc g++ git build-essential
+  - apt-get install -y r-base
+  - echo "options(bitmapType='cairo')" >> ~/.Rprofile
 
 stages:
   - build
