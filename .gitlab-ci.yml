@@ -4,7 +4,6 @@ before_script:
   - echo "options(bitmapType='cairo')" >> ~/.Rprofile
   - apt-get update -qy
   - apt-get install -y cmake nodejs python gcc g++ git
-  - R CMD install-packages.R
 
 stages:
   - build
@@ -13,6 +12,7 @@ stages:
 build:
   stage: build
   script:
+    - R CMD install-packages.R
     - npm install
     - cmake -DCMAKE_INSTALL_PREFIX=/usr/local
     - make
