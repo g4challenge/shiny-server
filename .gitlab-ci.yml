@@ -1,0 +1,29 @@
+image: r-base:latest
+
+before_script:
+  - echo "options(bitmapType='cairo')" >> ~/.Rprofile
+  - apt-get update -qy
+  - apt-get install -y cmake nodejs python gcc g++ git
+  - R CMD install-packages.R
+
+stages:
+  - build
+  - test
+
+build:
+  stage: build
+  script:
+    - npm install
+    - cmake -DCMAKE_INSTALL_PREFIX=/usr/local
+    - make
+    - npm rebuild
+    - ./ext/node/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js rebuild
+    - sudo ln -s /usr/local/shiny-server/bin/shiny-server /usr/bin/shiny-server
+    - sudo useradd -r -m shiny
+    - sudo mkdir -p /var/log/shiny-server
+    - sudo mkdir -p /srv/shiny-server
+    - sudo mkdir -p /var/lib/shiny-server
+    - sudo chown shiny /var/log/shiny-server
+    - sudo mkdir -p /etc/shiny-server
+    - sudo wget https://raw.github.com/rstudio/shiny-server/master/config/upstart/shiny-server.conf -O /etc/init/shiny-server.conf
+    - sudo start shiny-server
