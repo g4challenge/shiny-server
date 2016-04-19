@@ -1,5 +1,9 @@
 image: node:4.3.0
 
+cache:
+  paths:
+    - node_modules/
+
 before_script:
   - apt-get update -qy
   - apt-get install -y cmake python gcc g++ git build-essential
