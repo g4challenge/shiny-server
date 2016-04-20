@@ -24,12 +24,12 @@ build:
     - make
     - npm rebuild
     - ./ext/node/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js rebuild
-    - sudo ln -s /usr/local/shiny-server/bin/shiny-server /usr/bin/shiny-server
-    - sudo useradd -r -m shiny
-    - sudo mkdir -p /var/log/shiny-server
-    - sudo mkdir -p /srv/shiny-server
-    - sudo mkdir -p /var/lib/shiny-server
-    - sudo chown shiny /var/log/shiny-server
-    - sudo mkdir -p /etc/shiny-server
-    - sudo wget https://raw.github.com/rstudio/shiny-server/master/config/upstart/shiny-server.conf -O /etc/init/shiny-server.conf
-    - sudo start shiny-server
+    - ln -s /usr/local/shiny-server/bin/shiny-server /usr/bin/shiny-server
+    - useradd -r -m shiny
+    - mkdir -p /var/log/shiny-server
+    - mkdir -p /srv/shiny-server
+    - mkdir -p /var/lib/shiny-server
+    - chown shiny /var/log/shiny-server
+    - mkdir -p /etc/shiny-server
+    - wget https://raw.github.com/rstudio/shiny-server/master/config/upstart/shiny-server.conf -O /etc/init/shiny-server.conf
+    - start shiny-server
