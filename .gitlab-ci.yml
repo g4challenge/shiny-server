@@ -1,5 +1,4 @@
 image: node:4.3.0
-privileged: true
 
 cache:
   paths:
