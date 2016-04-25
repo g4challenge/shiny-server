@@ -1,4 +1,4 @@
-image: node:4.3.0
+image: node:4.4.3
 
 cache:
   paths:
@@ -6,7 +6,6 @@ cache:
 
 before_script:
   - echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
-  - apt-get update -qy
   - apt-get install -y cmake python gcc g++ git build-essential
   - apt-get install -y r-base
   - echo "options(bitmapType='cairo')" >> ~/.Rprofile
