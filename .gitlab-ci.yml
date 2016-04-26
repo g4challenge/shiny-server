@@ -6,9 +6,9 @@ cache:
 
 before_script:
   - echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
-  - apt-get update -qy
-  - apt-get install -y cmake python gcc g++ git build-essential
-  - apt-get install -y r-base
+  - apt-get update -qq
+  - apt-get install -qy cmake python gcc g++ git build-essential
+  - apt-get install -qy r-base
   - echo "options(bitmapType='cairo')" >> ~/.Rprofile
 
 stages:
