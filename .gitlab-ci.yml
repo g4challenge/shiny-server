@@ -17,6 +17,9 @@ stages:
 
 build:
   stage: build
+  artifacts:
+    paths:
+      - /usr/local/shiny-server/bin/shiny-server
   script:
     - su - -c "R -e \"install.packages(c('shiny', 'rmarkdown'), repos='http://cran.rstudio.com')\""
     - npm install
