@@ -17,7 +17,7 @@ RUN  mkdir -p /etc/shiny-server
 
 COPY . /usr/src/shiny
 
-RUN R -e \"install.packages(c('shiny', 'rmarkdown'), repos='http://cran.rstudio.com')\"
+RUN R -e 'install.packages(c("shiny", "rmarkdown"), repos="http://cran.rstudio.com")'
 RUN npm install
 RUN cmake -DCMAKE_INSTALL_PREFIX=/usr/local
 RUN make
