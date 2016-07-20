@@ -1,7 +1,7 @@
 FROM node:4.3
 
 RUN mkdir -p /usr/src/shiny
-WORKDIR /usr/src/app
+WORKDIR /usr/src/shiny
 
 RUN apt-get update -qy
 RUN apt-get install -y cmake python gcc g++ git build-essential
