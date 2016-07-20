@@ -1,4 +1,4 @@
-FROM node:4.3
+FROM node:5.0
 
 RUN mkdir -p /usr/src/shiny
 WORKDIR /usr/src/shiny
@@ -23,4 +23,5 @@ RUN cmake -DCMAKE_INSTALL_PREFIX=/usr/local
 RUN make
 RUN npm rebuild
 RUN ./ext/node/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js rebuild
+RUN make install
 RUN  ln -s /usr/local/shiny-server/bin/shiny-server /usr/bin/shiny-server
