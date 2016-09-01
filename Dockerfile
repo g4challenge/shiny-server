@@ -1,4 +1,4 @@
-FROM node:5.0
+FROM node:6.5.0
 
 RUN mkdir -p /usr/src/shiny
 WORKDIR /usr/src/shiny
@@ -11,7 +11,11 @@ WORKDIR R-3.3.1/
 RUN ./configure
 RUN make
 RUN make install
+
 WORKDIR /usr/src/shiny
+
+RUN rm -R R-3.3.1
+RUN rm R-3.3.1.tar.gz 
 
 RUN echo "options(bitmapType='cairo')" >> ~/.Rprofile
 
@@ -34,6 +38,8 @@ RUN make install
 RUN  ln -s /usr/local/shiny-server/bin/shiny-server /usr/bin/shiny-server
 
 COPY config/default.config /etc/shiny-server/shiny-server.conf
+
+RUN rm -R *
 
 EXPOSE 3838
 
